@@ -1,4 +1,4 @@
-# Cordova-Plugin-BTPrinter
+# Cordova-Plugin-BTPrinter2
 # same of https://github.com/CesarBalzer/Cordova-Plugin-BTPrinter
 # but connect by address and not by name
 # multiple connect btprinter original + my btprinter2
