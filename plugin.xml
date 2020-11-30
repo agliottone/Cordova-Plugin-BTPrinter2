@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-btprinter2"
+        version="0.0.1-dev">
+
+   <name>BTPrinter2</name>
+   <description>A cordova plugin for bluetooth printer for android platform.</description>
+
+   <repo>https://github.com/CesarBalzer/Cordova-Plugin-BTPrinter2</repo>
+   <license>Apache 2.0</license>
+   <keywords>cordova, bluetooth, printer, pos, text, barcode, image, base64, qrcode</keywords>
+
+   <author>Cesar E. Balzer</author>
+
+   <!-- cordova -->
+   <engines>
+      <engine name="cordova" version=">=3.0.0" />
+   </engines>
+
+   <js-module src="www/BluetoothPrinter2.js" name="BluetoothPrinter2">
+      <clobbers target="BTPrinter2" />
+   </js-module>
+
+   <!-- android -->
+   <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+         <feature name="BluetoothPrinter2">
+            <param name="android-package" value="br.com.cordova.printer.bluetooth.BluetoothPrinter2"/>
+         </feature>
+      </config-file>
+
+      <config-file target="AndroidManifest.xml" parent="/*">
+         <uses-permission android:name="android.permission.BLUETOOTH" />
+      </config-file>
+
+      <source-file src="src/android/BluetoothPrinter2.java" target-dir="src/br/com/cordova/printer/bluetooth" />
+
+   </platform>
+</plugin>
